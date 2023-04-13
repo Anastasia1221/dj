@@ -1,0 +1,25 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+<!-- Title -->
+{% block title %}
+News — {{ fullNew.title }}
+{% endblock title %}
+
+<!-- Items - articles -->
+{% block content %}
+    <a class="back-btn" href="/news/">Back!</a>
+    <h1>{{ fullNew.title|censor }}</h1>
+
+    <div class="content-block">
+        <p class="content-block text">
+            {{ fullNew.text|censor }}
+        </p>
+    </div>
+
+    <div class="upload-time">
+        {{ fullNew.created_at|date:'d.m.Y' }}
+    </div>
+
+{% endblock content %}

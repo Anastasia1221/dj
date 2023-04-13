@@ -1,0 +1,13 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Logged out
+{% endblock title%}
+
+{% block content %}
+    <h2>Выход</h2>
+    <form method="get" action="/news/">
+        <button type="submit">Выйти</button>
+    </form>
+
+{% endblock content%}
